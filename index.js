@@ -364,7 +364,7 @@ console.log(question.trim());
 
 //  task 4 
 {
-function getSumNumber(num) {
+function getSumNumbers(num) {
         var sum = 0, tmp;
         while (num) {
             tmp = num % 10;
@@ -373,6 +373,6 @@ function getSumNumber(num) {
         }
         return sum;
     }
-    alert(getSumNumber(2021));
+    alert(getSumNumbers(2021));
 }
 // 
