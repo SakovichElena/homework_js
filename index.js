@@ -365,7 +365,7 @@ console.log(question.trim());
 //  task 4 
 {
 function getSumNumbers(num) {
-        var sum = 0, tmp;
+        let sum = 0, tmp;
         while (num) {
             tmp = num % 10;
             num = (num - tmp) / 10;
