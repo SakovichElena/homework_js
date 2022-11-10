@@ -280,7 +280,7 @@ switch (userQuestion) {
     
 // task 8
 {
-let wrongSentence = "пОлИнА нАбЕрЕжНаЯ";
+const wrongSentence = "пОлИнА нАбЕрЕжНаЯ";
 let lowerString = wrongSentence.toLowerCase();
 let firstCharacter = lowerString[0];
 let firstCharacterUpper = firstCharacter.toUpperCase();
@@ -298,7 +298,7 @@ function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 {
-let wrongSentence = "пОлИнА нАбЕрЕжНаЯ";
+const wrongSentence = "пОлИнА нАбЕрЕжНаЯ";
 let tempString = wrongSentence.toLowerCase().split(' ');
 let result = "";
 for ( let i = 0; i < tempString.length; i++ ) {
@@ -329,7 +329,7 @@ for(let i = 0; i < 7; i++){
     for(let j = 0; j< i; j++){
         document.write("#");
     }
-    document.write("<br/>");
+document.write("<br/>");
 }
 }
 // 
@@ -357,7 +357,22 @@ function getSum(n) {
 // task 3
 {
 let question = "      What's up?        ";
- console.log(question);
+console.log(question);
 console.log(question.trim());
 }
  // 
+
+//  task 4 
+{
+function getSumNumber(num) {
+        var sum = 0, tmp;
+        while (num) {
+            tmp = num % 10;
+            num = (num - tmp) / 10;
+            sum += tmp;
+        }
+        return sum;
+    }
+    alert(getSumNumber(2021));
+}
+// 
