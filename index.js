@@ -336,13 +336,13 @@ document.write("<br/>");
 // task 1
 {
 function getSum(n) {
-    let sum = 0;
+    let Sum = 0;
     for (let i = 1; i <= n; i++) {
-        sum += i;
+        Sum += i;
+        }
+    return Sum;
     }
-    return sum;
-    }
-    alert( getSum(50) );
+    alert( getSum(50) );   
 }
 //   
     
