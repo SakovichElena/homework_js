@@ -1,3 +1,4 @@
+"use strict"
 // Part 1
 // task 1 
 {
@@ -309,20 +310,17 @@ console.log("Привет, " + result + "!");
 }
 // task 9
 {
-let userNumber = prompt("Пожалуйста,введите ваше число");
-// userNumber = 30;
-let subtraction = prompt("Сколько отнять от предыдущего числа?");
-// subtraction =5;
-let addition = prompt("Cколько прибавить к числу?");
-// addition = 78;
-let multiplication = prompt("На сколько умножить число?");
-// multiplication = 20;
-let division = prompt("На сколько разделить число?");
-// division = 2;
-let result = alert((((userNumber +  "-" + subtraction) + "+" + addition) + "*" + multiplication) + "/" + division + "=" + "1030");
+let userNumber = +prompt("Пожалуйста,введите ваше число");
+let subtraction = +prompt("Сколько отнять от предыдущего числа?");
+let addition = +prompt("Cколько прибавить к числу?");
+let multiplication = +prompt("На сколько умножить число?");
+let division = +prompt("На сколько разделить число?");
+let getSum = ((((userNumber - subtraction) + addition) * multiplication) / division);
+let sum = ((((userNumber +  "-" + subtraction) + "+" + addition) + "*" + multiplication) + "/" + division);
+let result = alert(sum + "=" + getSum);
 }
-// 
-    
+//  
+
 //  task 10
 {
 for(let i = 0; i < 7; i++){
@@ -360,7 +358,7 @@ let question = "      What's up?        ";
 console.log(question);
 console.log(question.trim());
 }
- // 
+// 
 
 //  task 4 
 {
@@ -374,5 +372,18 @@ function getSumNumbers(num) {
         return sum;
     }
     alert(getSumNumbers(2021));
+}
+// 
+
+// task 5
+{
+function sumTo(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+    }
+    alert( sumTo(100) );
 }
 // 
