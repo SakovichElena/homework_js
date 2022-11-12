@@ -347,7 +347,16 @@ function getSum(n) {
 //   
     
  // task 2
-    
+// {    в месяц 16.6p => 24.85p. 24.85 за 60 мес = 149.1p
+{  
+    function calcLoan(sum, percent, months) {
+        let sum = 1000;
+        let percent = 17;
+        let months = 60;
+    console.log()    
+    }
+    calcLoan()
+}
     
     
 // 
@@ -377,13 +386,63 @@ function getSumNumbers(num) {
 
 // task 5
 {
-function sumTo(n) {
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum += i;
-    }
-    return sum;
-    }
-    alert( sumTo(100) );
+    function sumTo(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+        }
+        alert( sumTo(100) );
+
+    
+{
+    // {
+    // function getSum(a, b) {
+    //     let Sum = 0;
+    //     let a = 0;
+    //     let b = 1;
+    //     for (a = 0 && b = 1; a <= n; a++) {
+    //         Sum += a;
+    //     }
+    //     return Sum;
+    //     }
+    // }
+}
 }
 // 
+
+// task 6
+{
+    function fooboo () {
+        prompt("введи слово");
+        let a;
+        if (a == "foo") {
+            console.log("foo")
+        }
+    }
+    fooboo()
+
+}
+{
+    function fooboo(a, b) {
+        let a = prompt("введи слово");
+        let b = "foo";
+        for (let b = "foo"; b = true; b++ ) {
+            console.log("foo");
+        }
+        fooboo(a, b)
+    }
+
+}
+{
+    function fooboo () {
+        let a = prompt("Пожалуйста, введите слово");
+        if (a == "foo") {
+            console.log("foo");
+        } else if (a == "boo") {
+            console.log("boo");
+        }
+    }
+    fooboo()
+}
