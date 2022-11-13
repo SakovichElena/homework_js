@@ -79,18 +79,18 @@ let hisSchedule = null;
     
 // task 7
 {
-let userName = "Please enter your name";
-alert(userName);
+let userName = prompt("Please enter your name");
+console.log(userName);
 let userAge = prompt("Please enter your age");
-alert(userAge);
+console.log(userAge);
  }
 // 
     
 // task 7 - another decision
 {
 let userInfo = ["userName", "userAge"];
-alert(userInfo[0] = "Please enter your name");
-alert(userInfo[1] = "Please enter your age");
+prompt(userInfo[0] = "Please enter your name");
+prompt(userInfo[1] = "Please enter your age");
 }
 // 
     
@@ -384,65 +384,302 @@ function getSumNumbers(num) {
 }
 // 
 
-// task 5
+// task 5 - понять суть
 {
-    function sumTo(n) {
-        let sum = 0;
-        for (let i = 1; i <= n; i++) {
-            sum += i;
-        }
-        return sum;
-        }
-        alert( sumTo(100) );
-
-    
-{
-    // {
-    // function getSum(a, b) {
-    //     let Sum = 0;
-    //     let a = 0;
-    //     let b = 1;
-    //     for (a = 0 && b = 1; a <= n; a++) {
-    //         Sum += a;
-    //     }
-    //     return Sum;
-    //     }
-    // }
+function getSum(a, b) {
+    let Sum = 0;
+    let a = 0;
+    let b = 1;
+    // for (a = 0 && b = 1; a <= n; a++) {
+        Sum += a;
+    }
+    return Sum;
 }
+
+{
+function calculateTotal(number) { 
+    // let sum = 0;
+    for(var i=0, sum=0; i<= num; sum+=i++);
+        sum += i; } 
+return sum;
+}
+//  
+
+{
+function calculateTotal(number) { 
+    let sum = 0;
+    for (let i = 0; i <= number; i += 1) {
+        sum += i;
+    }  
+    return sum; 
+    }
+    console.log(calculateTotal(3));
 }
 // 
 
 // task 6
 {
-    function fooboo () {
-        prompt("введи слово");
-        let a;
-        if (a == "foo") {
-            console.log("foo")
-        }
+function fooboo () {
+    let a = prompt("введи слово");
+    if (a == "foo") {
+    alert("foo")
+    } else if (a == "boo") {
+        // console.log("boo");
+        alert("boo");
     }
-    fooboo()
+}
+fooboo()
+}
+
+// task 6 - another decision
+{
+function fooboo () {
+    let a = prompt("Пожалуйста, введите слово");
+    if (a == "foo") {
+        return a;
+    } else if (a == "boo") {
+        return a;
+    }
+}
+fooboo()
+}
+// 
+
+// task 7
+{
+var arr = new Array(3);
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+ }
+function trangel(arr){
+    if (Number.isInteger(arr[0]) && Number.isInteger(arr[1]) && Number.isInteger(arr[2])) {
+        alert("true");
+}
+else{
+alert("false");
+}
+}
+trangel(arr);
+}
+// 
+
+// task 7 - не работает!
+{
+var arr = new Array(3); 
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+    }
+function triangle(arr){
+alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger ) || alert ( arr[0] == !Number.isInteger &&  arr[1] == !Number.isInteger && arr[2] == !Number.isInteger)
+}
+triangle(arr);
+}
+// 
+
+// task 7 - не работает
+{
+var arr = new Array(3);
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+    }
+function triangle(arr){
+alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[3] == Number.isInteger ||  arr[0] !== Number.isInteger &&  arr[0] !== Number.isInteger && arr[0] !== Number.isInteger)
+}
+triangle(arr);
+}
+// 
+     
+// task 7 - another decision;
+{
+var arr = new Array(3);
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+}
+function triangle(arr){
+    if ( Number.isInteger(arr[0]) &&  Number.isInteger(arr[0]) && Number.isInteger(arr[0])) {
+        alert("true");
+}
+if ( !Number.isInteger(arr[0]) &&  !Number.isInteger(arr[0]) && !Number.isInteger(arr[0])) {
+    alert("false");
+}
+    }
+triangle(arr);
+}
+// 
+
+// task 7 - не работает!
+// ????
+{
+var arr = new Array(3);
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+    }
+function triangle(arr){
+    {
+        alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger )
+        alert ( arr[0] !== Number.isInteger &&  arr[1] !== Number.isInteger && arr[2] !== Number.isInteger)
+        }
+    // var arr = Number.isInteger ? true: false;
+    // let arr[1]Number.isInteger;
+    // let arr[2]Number.isInteger;
+// alert(Boolean(arr[0])(arr[1])(arr[2]));
+// alert(Boolean(arr[i]));
+}
+triangle(arr);
+}
+// 
+{
+alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger )
+alert ( arr[0] !== Number.isInteger &&  arr[1] !== Number.isInteger && arr[2] !== Number.isInteger)
+}
+triangle(arr);
+// 
+
+// task 7 - не работает
+// ?????
+{ 
+var arr = new Array(3);
+var i;
+for(i=0;i<3;i++)
+{
+arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
+    }
+function triangle(arr){
+    arr[0] = (Number.isInteger) ? true: false;
+    arr[1] = (Number.isInteger) ? true: false;
+    arr[2] = (Number.isInteger) ? true: false;
+// alert(Boolean(arr[0])(arr[1])(arr[2]));
+alert( Boolean(arr) );
+}
+triangle(arr);
+}
+// 
+
+// task 8
+{
 
 }
+// 
+
+// task 9
 {
-    function fooboo(a, b) {
-        let a = prompt("введи слово");
-        let b = "foo";
-        for (let b = "foo"; b = true; b++ ) {
-            console.log("foo");
-        }
-        fooboo(a, b)
-    }
 
 }
+// 
+
+
+// Part 4 - Functions
+// task 1
 {
-    function fooboo () {
-        let a = prompt("Пожалуйста, введите слово");
-        if (a == "foo") {
-            console.log("foo");
-        } else if (a == "boo") {
-            console.log("boo");
-        }
+let corgi = {
+    name : "Patrick",
+    theBestInTheWorld : true
+}
+delete corgi.name;
+'name' in corgi
+delete corgi.theBestInTheWorld;
+'theBestInTheWorld' in corgi
+}
+// 
+
+// task 2 
+{
+let movies = {
+    name : "Harry Potter",
+    amount : 8
+};
+console.log("name" in movies);
+console.log("amount" in movies);
+}
+// 
+
+// task 3 
+{
+const student = {
+    name: 'John',
+    age: 19,
+    isHappy: true
+    };
+for (let key in student) {
+    console.log(key);
+    console.log(student[key])
+}
+}
+// 
+
+// task 4 
+{
+const colors = {
+    'ru pum pu ru rum': {
+        red: 'красный',
+        green: 'зеленый',
+        blue: 'синий'
+    },
+};
+function findColor() {
+    console.log("${this.red}");
+}
+colors.red();
+}
+
+
+{
+const colors = {
+    'ru pum pu ru rum': {
+        red: 'красный',
+        green: 'зеленый',
+        blue: 'синий'
+    },
+findColor() {
+    console.log(this.red);
+}
+};
+colors.red();
+}
+// 
+
+// task 5
+{
+let salaries = {
+    andrey: 500,
+    sveta: 413,
+    anton: 987,
+    zhenya: 664,
+    alexandra: 199
+    };
+    let sum = 0;
+    for (let key in salaries) {
+      sum += salaries[key];
     }
-    fooboo()
+    let averageSalary = 0;
+    let guys = 5;
+    for (let key in salaries) {
+        averageSalary = sum / guys;
+      } 
+    alert(averageSalary);
+}
+// 
+
+// task 6
+{
+let userLogin = prompt("Please enter your login");
+let userPassword = prompt("Please enter your password");
+let userData = {
+    login: userLogin,
+    password: userPassword
+}
+let confirmation = prompt("Please confirm your data");
+    if(userData.validity.typeMismatch) {
+        alert("Добро пожаловать");
+    }
 }
