@@ -672,14 +672,49 @@ let salaries = {
 
 // task 6
 {
-let userLogin = prompt("Please enter your login");
+let userName = prompt("Please enter your login");
 let userPassword = prompt("Please enter your password");
 let userData = {
-    login: userLogin,
-    password: userPassword
+    userName: "Expecto Patronum",
+    userPassword: "Avada Kedavra"
 }
-let confirmation = prompt("Please confirm your data");
-    if(userData.validity.typeMismatch) {
-        alert("Добро пожаловать");
+if (userName == "Expecto Patronum" && userPassword == "Avada Kedavra") {
+        alert ("Добро пожаловать");
     }
 }
+// 
+
+// task 6 - another decision
+{
+let userName = prompt("Please enter your login");
+if (userName == "Expecto Patronum") {
+    let userPassword = prompt("Please enter your password");
+    if (userPassword == "Avada Kedavra") {
+        alert ("Добро пожаловать");
+    }
+}
+}
+// 
+
+// task 6 another decision
+{
+let userData = {
+    login: "Expecto Patronum",
+    password: "Avada Kedavra"
+    }
+let login = prompt("Please enter your login");
+if (login == "Expecto Patronum") {
+    let password = prompt("Please enter your password");
+    if (password == "Avada Kedavra") {
+        alert ("Добро пожаловать");
+    }
+}
+}
+// 
+
+
+
+
+
+
+
