@@ -332,7 +332,7 @@ document.write("<br/>");
 }
 // 
 
-// Part 3
+// Part 3 - Functions
 // task 1
 {
 function getSum(n) {
@@ -578,7 +578,7 @@ triangle(arr);
 // 
 
 
-// Part 4 - Functions
+// Part 4 - Objects
 // task 1
 {
 let corgi = {
@@ -712,7 +712,13 @@ if (login == "Expecto Patronum") {
 }
 // 
 
-//  task 7 
+// task 8
+{
+
+}
+// 
+
+//  task 8
 {
 let student1 = {
     name: 'Polina',
