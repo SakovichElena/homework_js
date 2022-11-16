@@ -346,7 +346,7 @@ function getSum(n) {
 }
 //   
     
- // task 2
+ // task 2 !!!!!!!
 // {    в месяц 16.6p => 24.85p. 24.85 за 60 мес = 149.1p
 {  
     function calcLoan(sum, percent, months) {
@@ -358,7 +358,40 @@ function getSum(n) {
     calcLoan()
 }
     
-    
+{
+    let payForMonth = sum*(percent/(12*100))/(1-(1+percent/(12*100))**(-month)); 
+//         let overPay = Math.floor(payForMonth*month - sum);
+
+{
+function calcLoan(sum, percent, month) {
+    // let sum = 1000;
+    // let percent = 17;
+    // let months = 60;
+    let payForMonth = sum*(percent/(12*100))/(1-(1+percent/(12*100))**(-month)); 
+console.log(payForMonth)    
+}
+calcLoan(1000, 17, 60)
+
+}
+}
+
+
+
+  {
+    {
+        function calcLoan(sum, percent, month) {
+            // let sum = 1000;
+            // let percent = 17;
+            // let months = 60;
+            let payForMonth = sum * percent/(1-(1+percent/(12*100))**(-month)); 
+        console.log(payForMonth)    
+        }
+        calcLoan(1000, 17, 60)
+        let overPay = Math.floor(payForMonth*month - sum);
+        }
+  }
+
+
 // 
     
 // task 3
@@ -384,36 +417,26 @@ function getSumNumbers(num) {
 }
 // 
 
-// task 5 - понять суть
+// task 5 
 {
-function getSum(a, b) {
-    let Sum = 0;
-    let a = 0;
-    let b = 1;
-    // for (a = 0 && b = 1; a <= n; a++) {
-        Sum += a;
-    }
-    return Sum;
-}
-
-{
-function calculateTotal(number) { 
-    // let sum = 0;
-    for(var i=0, sum=0; i<= num; sum+=i++);
-        sum += i; } 
-return sum;
-}
-//  
-
-{
-function calculateTotal(number) { 
+function getSum(a,b) { 
     let sum = 0;
-    for (let i = 0; i <= number; i += 1) {
+    for (let i = a; i <= b; i ++) {
         sum += i;
     }  
     return sum; 
     }
-    console.log(calculateTotal(3));
+    console.log(getSum(4,7));
+}
+{
+function getSum(a,b) { 
+    let sum = 0;
+    for (let i = b; i <= a; i ++) {
+        sum += i;
+    }  
+    return sum; 
+    }
+    console.log(getSum(2,1));
 }
 // 
 
@@ -447,54 +470,22 @@ fooboo()
 
 // task 7
 {
-var arr = new Array(3);
-var i;
-for(i=0;i<3;i++)
+let arr = new Array(3);
+for( let i=0;i<3;i++)
 {
 arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
- }
-function trangel(arr){
-    if (Number.isInteger(arr[0]) && Number.isInteger(arr[1]) && Number.isInteger(arr[2])) {
-        alert("true");
 }
-else{
-alert("false");
-}
-}
-trangel(arr);
-}
-// 
-
-// task 7 - не работает!
-{
-var arr = new Array(3); 
-var i;
-for(i=0;i<3;i++)
-{
-arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
-    }
 function triangle(arr){
-alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger ) || alert ( arr[0] == !Number.isInteger &&  arr[1] == !Number.isInteger && arr[2] == !Number.isInteger)
+// alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[3] == Number.isInteger ||  arr[0] !== Number.isInteger &&  arr[0] !== Number.isInteger && arr[0] !== Number.isInteger)
+if (Number.isInteger(arr[0]) && Number.isInteger(arr[1]) && Number.isInteger(arr[2])) {
+return "true";
+}
+return "false";
 }
 triangle(arr);
 }
 // 
-
-// task 7 - не работает
-{
-var arr = new Array(3);
-var i;
-for(i=0;i<3;i++)
-{
-arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
-    }
-function triangle(arr){
-alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[3] == Number.isInteger ||  arr[0] !== Number.isInteger &&  arr[0] !== Number.isInteger && arr[0] !== Number.isInteger)
-}
-triangle(arr);
-}
-// 
-     
+ 
 // task 7 - another decision;
 {
 var arr = new Array(3);
@@ -515,36 +506,6 @@ triangle(arr);
 }
 // 
 
-// task 7 - не работает!
-// ????
-{
-var arr = new Array(3);
-var i;
-for(i=0;i<3;i++)
-{
-arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
-    }
-function triangle(arr){
-    {
-        alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger )
-        alert ( arr[0] !== Number.isInteger &&  arr[1] !== Number.isInteger && arr[2] !== Number.isInteger)
-        }
-    // var arr = Number.isInteger ? true: false;
-    // let arr[1]Number.isInteger;
-    // let arr[2]Number.isInteger;
-// alert(Boolean(arr[0])(arr[1])(arr[2]));
-// alert(Boolean(arr[i]));
-}
-triangle(arr);
-}
-// 
-{
-alert ( arr[0] == Number.isInteger  &&  arr[1] == Number.isInteger && arr[2] == Number.isInteger )
-alert ( arr[0] !== Number.isInteger &&  arr[1] !== Number.isInteger && arr[2] !== Number.isInteger)
-}
-triangle(arr);
-// 
-
 // task 7 - не работает
 // ?????
 { 
@@ -555,9 +516,9 @@ for(i=0;i<3;i++)
 arr[i]= +prompt("Введите " +(i+1)+" сторону:","");
     }
 function triangle(arr){
-    arr[0] = (Number.isInteger) ? true: false;
-    arr[1] = (Number.isInteger) ? true: false;
-    arr[2] = (Number.isInteger) ? true: false;
+    arr[0] = (Number.isInteger(10/5)) ? true: false;
+    arr[1] = (Number.isInteger(10/5)) ? true: false;
+    arr[2] = (Number.isInteger(10/5)) ? true: false;
 // alert(Boolean(arr[0])(arr[1])(arr[2]));
 alert( Boolean(arr) );
 }
