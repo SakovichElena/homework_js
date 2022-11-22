@@ -294,6 +294,10 @@ alert(welcome);
 // 
 
 // task 8 - another decision
+
+
+// 
+
 {
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -400,6 +404,29 @@ let question = "      What's up?        ";
 console.log(question);
 console.log(question.trim());
 }
+
+
+// !!!!!!!!!!!!! - посмотреть
+{
+    function trimString(str, from, to) {
+        const result = str.slice(from, to);
+        return result;
+    }
+    console.log(trimString("Большое предложение много слов пятое десятой", 4 ,15))
+
+
+
+{
+    function trimString(str, fromStr) {
+        console.log(str.lastIndexOf(fromStr))
+        return str.slice(str.lastIndexOf(fromStr) + fromString.length).trim();
+        }
+    }
+    console.log(trimString("Большое предложение много слов пятое десятой","много"))
+}
+
+
+
 // 
 
 //  task 4 
@@ -438,6 +465,10 @@ function getSum(a,b) {
     }
     console.log(getSum(2,1));
 }
+
+// сделать с помощью одного цикла
+
+
 // 
 
 // task 6
@@ -673,9 +704,16 @@ if (login == "Expecto Patronum") {
 }
 // 
 
-// task 7
+// task 7- правильно ли поняла суть таски?
 {
-
+let goalCount = 9;
+let count = "2:5";
+let i = 0;
+if (i > 9) {
+    i++;
+}
+console.log(count);
+console.log(typeof(+count));
 }
 // 
 
@@ -693,8 +731,219 @@ console.log(JSON.stringify(student1) === JSON.stringify(student2));
 }
 // 
 
+//  task 9
+{
+const animals = {
+    cat: {
+        name: 'Енчик',
+        age: 3,
+    },
+    dog: {
+        name: 'Орео',
+        age: 2,
+    }
+}
+console.log(Object.hasOwn(animals, 'bird'));
+}
+// 
+
+// task 9 - another decision
+{
+ const animals = {
+    cat: {
+        name: 'Енчик',
+        age: 3,
+    },
+    dog: {
+        name: 'Орео',
+        age: 2,
+    }
+}
+console.log(animals, 'bird'); 
+}
+// 
+
+// Part 5 - Arrays
+// task 1
+{
+const colors = ['red', 'green', 'blue']
+console.log(colors.length);
+}
+// 
+
+// task 2
+{
+    const animals = ['monkey', 'dog', 'cat']   
+    let lastEl = animals.pop();
+    console.log(lastEl);
+    // console.log(animals[2]); - another decision
+    // console.log(animals[animals.length - 1]); - another decision
+    // console.log(animals.slice(2)); - another decision
+}
+//  
+
+//  task 3
+{
+    const numbers = [5, 43, 63, 23, 90]
+    let numDelete = numbers.splice(0);
+    console.log(numbers);
+    // for (i = 0;i < numbers.length; i++)numbers.splice(i) - another decision
+    // console.log (numbers);
+    // numbers.length = 0; - another decision
+    // console.log (numbers);
+}
+// 
+
+//  task 4
+{
+const students = ['Polina', 'Dasha', 'Masha'];
+const remove = students.splice(2, 1, 'Borya');
+const exchange = students.splice(0, 1, 'Andrey');
+console.log(students);
+}
+//  
+
+//  task 4 - another decision
+{
+const students = ['Polina', 'Dasha', 'Masha'];
+const deleteEl = students.pop();
+const firstEl = students.push('Borya'); 
+const  clearEl = students.shift();
+const reversed = students.reverse();
+const secondEl = students.push('Andrey');
+const reversedEl = students.reverse();
+console.log(students);
+}
+// 
+
+// task 5 - with for
+{
+const cats = ['Gachito', 'Tom', 'Batman'] 
+for (let i = 0; i < cats.length; i++) {
+    console.log(cats.join(','));
+}
+console.log(cats);
+}
+
+//task 5 - second decision with for of
+{
+const cats = ['Gachito', 'Tom', 'Batman'] 
+for (const value of cats) {
+    console.log(value);
+  }
+}
+// 
+
+// task 5 - another decision 
+{
+const cats = ['Gachito', 'Tom', 'Batman']
+for (let i = 0; i < cats.length; i++) {
+    cats.forEach(element => console.log(element));
+    break;
+}
+console.log(cats);
+}
+// 
+
+// task 6 
+{
+const evenNumbers = [2, 4, 6, 8, 10]
+const oddNumbers = [1, 3, 5, 7, 9]
+const newArr = evenNumbers.concat(oddNumbers);
+console.log(newArr.indexOf(8));
+}
+// 
+
+// task 7 - first decision
+{
+const binary = [0, 0, 0, 0]
+const addNum = binary.map(x => x + '1');
+console.log(addNum.toString());
+}
+// 
+
+// task 7 - second decision
+{
+const binary = [0, 0, 0, 0]
+const addNum = binary.join('1');
+console.log(addNum);
+}
+// 
+
+//  task 8 - first decision
+{
+function checkPalindrom(palindrome) {
+    for (let i = palindrome.length; i > 0; i-- ) {
+        if ( palindrome[i] = palindrome.charAt(palindrome.length)-1 ) {
+            console.log('the word is palindrome.');
+        } else {
+            console.log('the word is not palindrome!');
+        }
+    }
+}
+checkPalindrom('racecar');
+}
+// 
+
+// task 8 - second decision
+{
+function checkPalindrome(string) {
+    const len = string.length;
+        for (let i = 0; i < len / 2; i++) {
+            if (string[i] !== string[len - 1 - i]) {
+                return 'It is not a palindrome';
+            }
+        }
+        return 'It is a palindrome';
+    }
+checkPalindrome('racecar');
+}
+// 
+
+// task 9 
+{
+    const matrix = [
+        [12, 98, 78, 65, 23],
+        [54, 76, 98, 43, 65],
+        [13, 324, 65, 312],
+        [9092, 22, 45, 90000],
+    ]
+}
 
 
 
 
+
+
+
+//  
+// let arr  
+// 1 создайте пустой массив 
+// 2 добавить числа от 1 до 100 
+// 3 получить индекс числа 50 - X 
+// 4 обрезать массив с индекса X 
+// 5 получить сумму всех чисел
+
+{
+let arr = [];
+const count = 100;
+for (let i = 0; i < count; i++) {
+    arr.push (i + 1); // i + 1 , чтобы счет начинался не с 0 ,а с 1
+}
+const middleIndex = arr.indexOf(50);
+const tempArr = arr.slice(middleIndex);
+const sum = tempArr.reduce((el, curr) => el + curr, 0);
+console.log(sum);
+}
+
+
+//  прикоооол
+{
+    let arr = [];
+    let count = 100;
+    for (let i = 0; i < count; i++) {
+        arr.push (i + 1);  
+        console.log(arr); // внутри цикла. счет не от 1 до 100, а в каждой цифре от 1 + 1 каждый раз
+    }
+}
 
