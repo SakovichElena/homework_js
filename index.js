@@ -294,10 +294,6 @@ alert(welcome);
 // 
 
 // task 8 - another decision
-
-
-// 
-
 {
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -311,6 +307,8 @@ for ( let i = 0; i < tempString.length; i++ ) {
 }
 console.log("Привет, " + result + "!");
 }
+// 
+
 }
 // task 9
 {
@@ -704,7 +702,7 @@ if (login == "Expecto Patronum") {
 }
 // 
 
-// task 7- правильно ли поняла суть таски?
+// task 7- правильно ли поняла суть?
 {
 let goalCount = 9;
 let count = "2:5";
@@ -900,14 +898,130 @@ checkPalindrome('racecar');
 }
 // 
 
-// task 9 
+// task 9 (6272.6625)
 {
-    const matrix = [
-        [12, 98, 78, 65, 23],
-        [54, 76, 98, 43, 65],
-        [13, 324, 65, 312],
-        [9092, 22, 45, 90000],
-    ]
+ const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000],
+]
+const FIRST_SUM = matrix[0][0] + matrix[0][1] + matrix[0][2] + matrix[0][3] + matrix[0][4];
+const FIRST_AVERAGE_NUM = FIRST_SUM / matrix[0].length;
+const SECOND_SUM = matrix[1][0] + matrix[1][1] + matrix[1][2] + matrix[1][3] + matrix[1][4];
+const SECOND_AVERAGE_NUM = SECOND_SUM / matrix[1].length;
+const THIRD_SUM = matrix[2][0] + matrix[2][1] + matrix[2][2] + matrix[2][3];
+const THIRD_AVERAGE_SUM = THIRD_SUM / matrix[2].length;
+const FOURTH_SUM = matrix[3][0] + matrix[3][1] + matrix[3][2] + matrix[3][3];
+const FOURTH_AVERAGE_SUM = FOURTH_SUM / matrix[3].length;
+const AVERAGE_NUM = (FIRST_AVERAGE_NUM + SECOND_AVERAGE_NUM + THIRD_AVERAGE_SUM + FOURTH_AVERAGE_SUM) / matrix.length;
+console.log(AVERAGE_NUM);
+}
+// 
+
+// task 9 - another decision (5582)
+{
+const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000],
+]
+let newMatrix = matrix[0].concat(matrix[1], matrix[2], matrix[3]);
+  let sum = 0;
+  for (let i = 0; i < newMatrix.length; i++) {
+       sum += newMatrix[i];
+  }
+let AVERAGE_NUM = sum / newMatrix.length;
+console.log(sum);
+console.log(newMatrix);
+console.log(AVERAGE_NUM);
+}
+// 
+
+//  task 10 
+{
+const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
+function isBigEnough(value) {
+    return value >= 0;
+  }
+let filtered = mixedNumbers.filter(isBigEnough);
+let positiveNumbers = filtered;
+function isNotBigEnough(value) {
+    return value < 0;
+  }
+let filteredNum = mixedNumbers.filter(isNotBigEnough);
+let negativeNumbers = filteredNum;
+console.log(positiveNumbers);
+console.log(negativeNumbers);
+}
+// 
+
+//  task 11 верно ли?
+{
+let randomNumbers = [getRandomInt(7), getRandomInt(6), getRandomInt(5), getRandomInt(4), getRandomInt(3), getRandomInt(2), getRandomInt(1)];
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+    }
+let firstNumber = Math.pow(randomNumbers[0], 3);
+let secondNumber = Math.pow(randomNumbers[1], 3);
+let thirdNumber = Math.pow(randomNumbers[2], 3);
+let fourthNumber = Math.pow(randomNumbers[3], 3);
+let fifthNumber = Math.pow(randomNumbers[4], 3);
+let sixthNumber = Math.pow(randomNumbers[5], 3);
+let seventhNumber = Math.pow(randomNumbers[6], 3);
+let nextArray = [firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber, sixthNumber, seventhNumber];
+console.log(randomNumbers);
+console.log(nextArray);
+}
+
+
+// task 11
+{
+let randomNumbers = [1, 2, 3, 4, 5, 6, 7];
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+//   console.log(getRandomInt(7));
+//   console.log(getRandomInt(5));
+//   console.log(getRandomInt(4));
+//   console.log(getRandomInt(3));
+//   console.log(getRandomInt(6));
+const newArr = randomNumbers.map(Math.random) ;
+console.log(newArr);
+// let firstNumber = Math.pow(newArr[0], 3);
+// let secondNumber = Math.pow(newArr[1], 3);
+// let thirdNumber = Math.pow(newArr[2], 3);
+// let fourthNumber = Math.pow(newArr[3], 3);
+// let fifthNumber = Math.pow(newArr[4], 3);
+// let sixthNumber = Math.pow(newArr[5], 3);
+// let seventhNumber = Math.pow(newArr[6], 3);
+// let nextArray = [firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber, sixthNumber, seventhNumber];
+newArr.forEach(element => Math.pow(element, 3));
+
+// let arr = [Math.pow(newArr[0], 3)];
+console.log(newArr);
+}
+
+
+
+{         
+let arr = [],
+    min = 1,
+    max = 9;
+    for (let i = 0; i < 6; i++) {
+        arr[i] = [];
+    for (let j = 0; j < 6; j++) {
+        arr[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    }
+    for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+        document.write(arr[i][j] + " ");
+    }
+    document.write("<br>");
+    }
+    console.log(arr);
 }
 
 
@@ -923,7 +1037,6 @@ checkPalindrome('racecar');
 // 3 получить индекс числа 50 - X 
 // 4 обрезать массив с индекса X 
 // 5 получить сумму всех чисел
-
 {
 let arr = [];
 const count = 100;
@@ -935,15 +1048,3 @@ const tempArr = arr.slice(middleIndex);
 const sum = tempArr.reduce((el, curr) => el + curr, 0);
 console.log(sum);
 }
-
-
-//  прикоооол
-{
-    let arr = [];
-    let count = 100;
-    for (let i = 0; i < count; i++) {
-        arr.push (i + 1);  
-        console.log(arr); // внутри цикла. счет не от 1 до 100, а в каждой цифре от 1 + 1 каждый раз
-    }
-}
-
